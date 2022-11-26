@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+:root {
+  --color-1: #f3efe0;
+  --color-2: #434242;
+  --color-3: #222222;
+  --color-4: #22a39f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-4);
+  text-shadow: 0px 0px 10px var(--color-4);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+.social-icons {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.name {
+  color: var(--color-4);
+}
+
+/* Main content */
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main-content {
+  width: 80vw;
+  color: var(--color-1);
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.main-skills {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-3);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  width: 80vw;
 }
 
-.App-link {
-  color: #61dafb;
+.main-skills div {
+  flex: 1;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-1);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-skills div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+.main-skills div ul li {
+  background-color: var(--color-4);
+  color: var(--color-1);
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.main-skills__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-1);
+  margin-top: 250px;
+  margin-bottom: 50px;
+}
+
+.bar {
+  height: 3px;
+  width: 100px;
+  background-color: var(--color-4);
+}
+
+/* Footer */
+footer {
+  color: var(--color-1);
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 30px;
+  flex-basis: 0;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
-  to {
+}
+
+/* Page animation */
+.animate-onload-from-left {
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icon-rotation:hover {
+  animation: 0.5s ease-in-out 0s 1 rotation;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
     transform: rotate(360deg);
   }
 }

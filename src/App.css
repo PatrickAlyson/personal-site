@@ -8,8 +8,9 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  gap: 150px;
   height: 100vh;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 ul {
@@ -21,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+header a:hover {
   color: var(--color-4);
   text-shadow: 0px 0px 10px var(--color-4);
 }
@@ -29,7 +30,8 @@ a:hover {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
   padding: 30px 20px;
 }
 
@@ -59,6 +61,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 60px;
 }
 
 .main-content {
@@ -68,7 +71,7 @@ main {
   margin: 0 auto;
 }
 
-.main-skills {
+/* .main-skills {
   display: flex;
   flex-direction: row;
   color: var(--color-3);
@@ -116,6 +119,34 @@ main {
   height: 3px;
   width: 100px;
   background-color: var(--color-4);
+} */
+
+.main-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.main-buttons a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 160px;
+  height: 50px;
+  border: 2px solid var(--color-1);
+  color: var(--color-1);
+  background: none;
+  font-size: 1.5rem;
+  box-shadow: inset 0 0 0 0 var(--color-4);
+  transition: ease-out 0.3s;
+  outline: none;
+  border-radius: 2px;
+}
+
+.main-buttons a:hover {
+  box-shadow: inset 160px 0 0 0 var(--color-4);
+  cursor: pointer;
+  color: var(--color-2);
 }
 
 /* Footer */
@@ -133,12 +164,26 @@ footer {
   flex-basis: 0;
   padding-bottom: 20px;
 }
-
-@media (max-width: 500px) {
+/* Media queries */
+@media (max-width: 576px) {
   header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+  }
+
+  .main-content {
+    font-size: 1.3rem;
+  }
+
+  .main-buttons {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 830px) {
+  .main-content {
+    font-size: 1.5rem;
   }
 }
 
@@ -149,10 +194,28 @@ footer {
 
 @keyframes slideInFromLeft {
   0% {
+    opacity: 0;
     transform: translateX(-100%);
   }
 
   100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-onload-from-right {
+  animation: 1s ease-in-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }

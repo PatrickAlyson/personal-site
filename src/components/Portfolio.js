@@ -11,7 +11,7 @@ function Portfolio() {
       <Link className="portfolio-back-button" to="/">
         Back
       </Link>
-      <h1 className="portfolio-title">Portfolio</h1>
+      <h1 className="portfolio-title">Projects</h1>
       <div className="bar"></div>
       <div className="portfolio-main">
         {data.map((project) => {

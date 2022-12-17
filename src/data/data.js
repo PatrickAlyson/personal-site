@@ -1,6 +1,33 @@
 const data = [
   {
     id: 1,
+    title: "React Meals",
+    desc: "This is a small food ordering web app made with React. It is possible to filter the meals by categories and add them to your cart. The cart is functional, you can add and remove items from it.",
+    img: "/images/reactmeals.png",
+    tags: [
+      "React",
+      "Context API",
+      "Hooks",
+      "CSS/HTML",
+      "JavaScript",
+      "Frontend",
+    ],
+    live: true,
+    live_link: "https://reactmealsapp.netlify.app/",
+    source: "https://github.com/PatrickAlyson/ReactMeals",
+  },
+  {
+    id: 2,
+    title: "To Do List",
+    desc: "This is a simple to do list. You can add, remove, update and mark tasks as complete. In the frontend we have HTML/CSS, JavaScript and Bootstrap, and in the backend we have PHP and a MySQL database.",
+    img: "/images/todos.png",
+    tags: ["HTML/CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "Fullstack"],
+    live: true,
+    live_link: "http://todoappportfolioproject.infinityfreeapp.com/",
+    source: "https://github.com/PatrickAlyson/app_todo_list",
+  },
+  {
+    id: 3,
     title: "Alien Invasion",
     desc: "This is a simple game made with the python library Pygame. This game was inspired by Space Invaders.",
     img: "/images/game_3.png",
@@ -14,16 +41,6 @@ const data = [
     live: false,
     live_link: "",
     source: "https://github.com/PatrickAlyson/alien_invasion_game",
-  },
-  {
-    id: 2,
-    title: "To Do List",
-    desc: "This is a simple to do list. The frontend was done with HTML/CSS, JavaScript and Bootstrap. The backend was done with PHP and a MySQL database.",
-    img: "/images/todos.png",
-    tags: ["HTML/CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "Fullstack"],
-    live: true,
-    live_link: "http://todoappportfolioproject.infinityfreeapp.com/",
-    source: "https://github.com/PatrickAlyson/app_todo_list",
   },
 ];
 export default data;

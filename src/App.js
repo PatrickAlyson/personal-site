@@ -9,6 +9,18 @@ import Error from "./components/Error";
 function App() {
   return (
     <BrowserRouter>
+      <div className="background-animation">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <Routes>
         <Route exact path="/" element={<Home />} />
 
